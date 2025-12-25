@@ -21,8 +21,6 @@ const Projects = () => {
   const getCurrentProjects = () => {
     switch (active) {
       case 'react': return Flutter;
-      // case 'js': return Js;
-      // case 'next': return Next;
       default: return [];
     }
   };
@@ -33,7 +31,7 @@ const Projects = () => {
     const handleResize = () => {
       if (window.innerWidth < 768) setSlidesPerView(1);
       else if (window.innerWidth < 1024) setSlidesPerView(2);
-      else setSlidesPerView(3);
+      else setSlidesPerView(4);
     };
 
     handleResize();
@@ -113,9 +111,21 @@ const Projects = () => {
                       animate={{ opacity: 1, scale: 1 }}
                       transition={{ duration: 0.6 }}
                     >
-                      <div className="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 flex flex-col">
+                      <div
+                        onClick={() => { if (window.innerWidth < 768) handleExpandClick(item.id); }}
+                        className="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 flex flex-col cursor-pointer"
+                        role="button"
+                        tabIndex={0}
+                        onKeyDown={(e) => { if ((e.key === 'Enter' || e.key === ' ') && window.innerWidth < 768) handleExpandClick(item.id); }}
+                      >
                         <motion.div className="overflow-hidden" whileHover={{ scale: 1.05 }} transition={{ duration: 0.3 }}>
-                          <img src={item.img} alt={item.title} className="w-full h-[340px] object-center" loading="lazy" />
+                          {item.img ? (
+                            <img src={item.img} alt={item.title} className="w-full h-48 sm:h-64 md:h-[340px] object-center" loading="lazy" />
+                          ) : (
+                            <div className="w-full h-48 sm:h-64 md:h-[340px] bg-slate-200 flex items-center justify-center text-slate-500">
+                              <span>No image</span>
+                            </div>
+                          )}
                         </motion.div>
 
                         <div className="p-4 flex flex-col">
@@ -133,19 +143,19 @@ const Projects = () => {
                             </div>
 
                             <button
-                              onClick={() => handleExpandClick(item.id)} // toggle based on id
-                              className="text-gray-600 hover:text-blue-500 transition-colors"
+                              onClick={(e) => { e.stopPropagation(); handleExpandClick(item.id); }} // toggle based on id
+                              className="text-gray-600 hover:text-blue-500 transition-colors w-10 h-10 rounded-full flex items-center justify-center"
                               aria-expanded={isExpanded}
                               aria-label="show more"
                             >
-                              <motion.div animate={{ rotate: isExpanded ? 180 : 0 }} transition={{ duration: 0.3 }}>
-                                <ChevronDown size={28} />
+                              <motion.div animate={{ rotate: (isExpanded || slidesPerView === 1) ? 180 : 0 }} transition={{ duration: 0.3 }}>
+                                <ChevronDown size={20} />
                               </motion.div>
                             </button>
                           </div>
 
                           <AnimatePresence initial={false}>
-                            {isExpanded && (
+                            {(isExpanded || slidesPerView === 1) && (
                               <motion.div initial={{ height: 0, opacity: 0 }} animate={{ height: "auto", opacity: 1 }} exit={{ height: 0, opacity: 0 }} transition={{ duration: 0.3 }} className="overflow-hidden">
                                 <div className="mt-4 pt-4 border-t border-gray-200">
                                   <p className="text-gray-700 text-sm mb-3">{item.description}</p>
@@ -175,11 +185,11 @@ const Projects = () => {
 
             {currentProjects.length > slidesPerView && (
               <>
-                <button onClick={prevSlide} disabled={currentSlide === 0} className={`absolute left-0 top-1/2 -translate-y-1/2 -translate-x-1 z-10 w-12 h-12 rounded-full bg-slate-800/90 backdrop-blur-sm border border-slate-700 flex items-center justify-center transition-all ${ currentSlide === 0 ? 'opacity-30 cursor-not-allowed' : 'hover:bg-primary hover:border-primary' }`} aria-label="Previous slide">
+                <button onClick={prevSlide} disabled={currentSlide === 0} className={`absolute left-0 top-1/2 -translate-y-1/2 -translate-x-1 z-10 w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-slate-800/90 backdrop-blur-sm border border-slate-700 flex items-center justify-center transition-all ${ currentSlide === 0 ? 'opacity-30 cursor-not-allowed' : 'hover:bg-primary hover:border-primary' }`} aria-label="Previous slide">
                   <ChevronLeft className="w-6 h-6 text-white" />
                 </button>
 
-                <button onClick={nextSlide} disabled={currentSlide === maxSlide} className={`absolute right-0 top-1/2 -translate-y-1/2 translate-x-1 z-10 w-12 h-12 rounded-full bg-slate-800/90 backdrop-blur-sm border border-slate-700 flex items-center justify-center transition-all ${ currentSlide === maxSlide ? 'opacity-30 cursor-not-allowed' : 'hover:bg-primary hover:border-primary' }`} aria-label="Next slide">
+                <button onClick={nextSlide} disabled={currentSlide === maxSlide} className={`absolute right-0 top-1/2 -translate-y-1/2 translate-x-1 z-10 w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-slate-800/90 backdrop-blur-sm border border-slate-700 flex items-center justify-center transition-all ${ currentSlide === maxSlide ? 'opacity-30 cursor-not-allowed' : 'hover:bg-primary hover:border-primary' }`} aria-label="Next slide">
                   <ChevronRight className="w-6 h-6 text-white" />
                 </button>
               </>
@@ -188,7 +198,7 @@ const Projects = () => {
             {currentProjects.length > slidesPerView && (
               <div className="flex justify-center gap-2 mt-8">
                 {Array.from({ length: maxSlide + 1 }).map((_, idx) => (
-                  <button key={idx} onClick={() => setCurrentSlide(idx)} className={`w-2 h-2 rounded-full transition-all ${ idx === currentSlide ? 'bg-primary w-8' : 'bg-slate-600 hover:bg-slate-500' }`} aria-label={`Go to slide ${idx + 1}`} />
+                  <button key={idx} onClick={() => setCurrentSlide(idx)} className={`rounded-full p-2 transition-all ${ idx === currentSlide ? 'bg-primary w-8 h-2 sm:w-8 sm:h-2' : 'bg-slate-600 hover:bg-slate-500 w-2 h-2 sm:w-2 sm:h-2' }`} aria-label={`Go to slide ${idx + 1}`} />
                 ))}
               </div>
             )}

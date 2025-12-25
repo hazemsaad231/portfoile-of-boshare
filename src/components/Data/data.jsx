@@ -1,6 +1,14 @@
 import { SiFlutter, SiDart, SiFirebase, SiPostman, SiGit, SiGithub } from "react-icons/si";
 import { TbApi } from "react-icons/tb";
 import { FaDatabase } from "react-icons/fa";
+import chat from '../../assets/images/chat.jpeg';
+import todo from '../../assets/images/nots.jpeg';
+import news from '../../assets/images/news.jpeg';
+import weather from '../../assets/images/weather.jpeg';
+import marsal from '../../assets/images/marsal.webp';
+
+
+
 
 // ملاحظة: قم بتغيير مسارات الصور لتناسب ملفاتك الفعلية
 export const Icons = [
@@ -60,26 +68,42 @@ export const Flutter = [
     {
         id: 1,
         title: "Mersal",
+        img:marsal,
+        link:'https://github.com/Bu4ra-3mer/marsal.git',
         skills: ["Flutter", "RESTful APIs", "AI", "Text-to-Speech"],
         description: "An AI-based sign language translation tool providing bidirectional translation with camera input and text-to-speech features."
     },
     {
         id: 2,
         title: "To-Do List",
+        img:todo,
+        link:'https://github.com/Bu4ra-3mer/notes_app.git',
         skills: ["Flutter", "Clean Architecture", "Parse Server", "Freezed"],
         description: "A task management app built using Clean Architecture, integrating Parse Server for persistence and supporting Anonymous Sign-In."
     },
     {
         id: 3,
         title: "Chat App",
+        img:chat,
+        link:'https://github.com/Bu4ra-3mer/chat_app.git',
         skills: ["Flutter", "Firebase Auth", "Cloud Firestore"],
         description: "A real-time chat application with secure user authentication and live messaging capabilities."
     },
     {
         id: 4,
         title: "App News",
+        img:news,
+        link:'https://github.com/Bu4ra-3mer/news_app.git',
         skills: ["Flutter", "Dio", "RESTful API", "Cached Network Image"],
         description: "A multi-category news application fetching articles from APIs and optimizing image loading."
+    },
+    {
+        id: 5,
+        title: "Weather App",
+        img:weather,
+        link:'https://github.com/Bu4ra-3mer/weather_app.git',
+        skills: ["Flutter", "Dio", "RESTful API", "Cached Network Image"],
+        description: "A weather app displaying real-time weather information using APIs and optimizing image loading."
     }
 ];
 
