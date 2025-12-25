@@ -1,8 +1,6 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ExternalLink, ChevronDown, ChevronLeft, ChevronRight } from 'lucide-react';
-// import  {Js } from '../Data/data';
-// import { Next } from '../Data/data';
 import  Flutter  from '../Data/data';
 
 const Projects = () => {
@@ -10,13 +8,6 @@ const Projects = () => {
   const [expanded, setExpanded] = useState(null); // هنا الستيت الوحيدة اللي بتخزن الـ active card
   const [currentSlide, setCurrentSlide] = useState(0);
   const [slidesPerView, setSlidesPerView] = useState(3);
-
-  // const tabs = [
-  //    { id: 'next', label: 'Next' },
-  //   { id: 'react', label: 'React' },
-  //   { id: 'js', label: 'JS' }
-   
-  // ];
 
   const getCurrentProjects = () => {
     switch (active) {
@@ -65,23 +56,6 @@ const Projects = () => {
           Projects <span className='w-4 h-4 bg-primary inline-block rounded-full'></span>
         </h1>
       </div>
-
-      {/* <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.2 }} className="flex justify-center my-12">
-        <div className="flex gap-2 bg-slate-800/50 p-1.5 rounded-full backdrop-blur-sm border border-slate-700">
-          {tabs.map(tab => (
-            <button
-              key={tab.id}
-              onClick={() => handleToggle(tab.id)}
-              className={`relative px-8 py-3 rounded-full transition-all duration-300 ${ active === tab.id ? 'text-white' : 'text-slate-400 hover:text-slate-200' }`}
-            >
-              {active === tab.id && (
-                <motion.div layoutId="activeProjectTab" className="absolute inset-0 bg-primary rounded-full" transition={{ type: "spring", stiffness: 500, damping: 30 }} />
-              )}
-              <span className="font-medium relative z-10">{tab.label}</span>
-            </button>
-          ))}
-        </div>
-      </motion.div> */}
 
       <div className="container mx-auto px-4 max-w-7xl">
         <AnimatePresence mode="wait">
@@ -210,3 +184,4 @@ const Projects = () => {
 };
 
 export default Projects;
+
