@@ -93,7 +93,7 @@ export const Flutter = [
     },
     {
         id: 2,
-        title: "To-Do List",
+        title: "Notes App",
         img:todo,
         link:'https://github.com/Bu4ra-3mer/notes_app',
         skills: ["Flutter", "Clean Architecture", "Parse Server", "Freezed"],
