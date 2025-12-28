@@ -12,7 +12,7 @@ import profilePhoto from '../../assets/WhatsApp Image 2025-12-22 at 2.06.27 PM.j
 const Home = () => {
   return (
     <>
-    <div className='flex flex-col px-4 sm:px-4 md:px-6 lg:px-8 xl:px-32 pt-40 pb-28' id='home'>
+    <div className='flex flex-col px-4 sm:px-4 md:px-6 lg:px-8 xl:px-32 pt-40 pb-15' id='home'>
 
     <div className='flex flex-col-reverse lg:flex-row items-center justify-between gap-12 lg:gap-20 mb-16'>
     
@@ -35,8 +35,7 @@ const Home = () => {
               2000,
               'Mobile Developer',
               2000,
-              'UI/UX Enthusiast',
-              2000,
+              
             ]}
             wrapper="span"
             speed={50}
@@ -71,7 +70,7 @@ const Home = () => {
           <a href="https://github.com/Bu4ra-3mer" className='group' target="_blank" rel="noopener noreferrer">
             <FaGithub className='text-3xl text-gray-400 transition-all duration-300 group-hover:text-white group-hover:scale-110'/>
           </a>
-          <a href="https://www.linkedin.com/in/bushra-amer-02a68a31b" className='group' target="_blank" rel="noopener noreferrer">
+          <a href="https://www.linkedin.com/in/bushra-amer-/" className='group' target="_blank" rel="noopener noreferrer">
             <FaLinkedin className='text-3xl text-gray-400 transition-all duration-300 group-hover:text-blue-500 group-hover:scale-110'/>
           </a>
           <a href="https://wa.me/201017823288" className='group' target="_blank" rel="noopener noreferrer">
@@ -97,7 +96,7 @@ const Home = () => {
     </div>
     </div>
 
-<div className='card backdrop-blur-sm bg-white/5 rounded-2xl border border-primary/30 shadow-2xl w-full lg:w-[80%] xl:w-[60%] p-6 transition-all duration-500 ease-in-out hover:border-primary/60'>
+{/* <div className='card backdrop-blur-sm bg-white/5 rounded-2xl border border-primary/30 shadow-2xl w-full lg:w-[80%] xl:w-[60%] p-6 transition-all duration-500 ease-in-out hover:border-primary/60'>
   <ul className='flex flex-col sm:flex-row justify-center items-center gap-8 sm:gap-12 md:gap-16 lg:gap-24'> 
     <li className='flex flex-col items-center text-center group'>
       <span className='font-bold text-5xl md:text-6xl bg-gradient-to-r from-primary to-purple-400 bg-clip-text' style={{ WebkitTextFillColor: "transparent" }}>1+</span>
@@ -108,13 +107,9 @@ const Home = () => {
       <span className='font-bold text-5xl md:text-6xl bg-gradient-to-r from-primary to-purple-400 bg-clip-text' style={{ WebkitTextFillColor: "transparent" }}>10+</span>
       <span className='text-sm text-gray-400 mt-2 group-hover:text-white transition-colors'>Projects Completed</span>
     </li>
-    <li className='w-px h-12 bg-primary/30 hidden sm:block'></li>
-    <li className='flex flex-col items-center text-center group'>
-      <span className='font-bold text-5xl md:text-6xl bg-gradient-to-r from-primary to-purple-400 bg-clip-text' style={{ WebkitTextFillColor: "transparent" }}>5+</span>
-      <span className='text-sm text-gray-400 mt-2 group-hover:text-white transition-colors'>Happy Clients</span>
-    </li>
+   
   </ul>
-</div> 
+</div>  */}
 
 
 
