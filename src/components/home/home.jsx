@@ -81,7 +81,7 @@ const Home = () => {
     
     <div className='flex-shrink-0  relative'>
       {/* Decorative rings */}
-      <div className='hidden md:block'>
+      <div className='hidden'>
       <div className='absolute inset-0 rounded-full border-2 border-primary/30 animate-ping' style={{animationDuration: '3s'}}></div>
       <div className='absolute -inset-4 rounded-full border border-primary/20'></div>
       <div className='absolute -inset-8 rounded-full border border-primary/10'></div>
