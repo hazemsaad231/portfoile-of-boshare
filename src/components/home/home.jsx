@@ -79,37 +79,24 @@ const Home = () => {
         </div>
     </div>
     
-    <div className='flex-shrink-0 relative'>
+    <div className='flex-shrink-0  relative'>
       {/* Decorative rings */}
+      <div className='hidden md:block'>
       <div className='absolute inset-0 rounded-full border-2 border-primary/30 animate-ping' style={{animationDuration: '3s'}}></div>
       <div className='absolute -inset-4 rounded-full border border-primary/20'></div>
       <div className='absolute -inset-8 rounded-full border border-primary/10'></div>
-      
+      </div>
       {/* Glowing background */}
       <div className='absolute inset-0 rounded-full bg-gradient-to-br from-primary/40 to-purple-500/40 blur-2xl'></div>
       
       <img 
         src={profilePhoto} 
         alt={personal.name} 
-        className='relative z-10 w-64 h-64 sm:w-72 sm:h-72 md:w-80 md:h-80 lg:w-96 lg:h-96 rounded-full object-cover border-4 border-primary shadow-2xl shadow-primary/30 transition-transform duration-500 hover:scale-105'
+        className='relative z-10 w-60 h-60 sm:w-68 sm:h-68 md:w-80 md:h-80 lg:w-96 lg:h-96 rounded-full object-cover border-4 border-primary shadow-2xl shadow-primary/30 transition-transform duration-500 hover:scale-105'
       />
     </div>
     </div>
 
-{/* <div className='card backdrop-blur-sm bg-white/5 rounded-2xl border border-primary/30 shadow-2xl w-full lg:w-[80%] xl:w-[60%] p-6 transition-all duration-500 ease-in-out hover:border-primary/60'>
-  <ul className='flex flex-col sm:flex-row justify-center items-center gap-8 sm:gap-12 md:gap-16 lg:gap-24'> 
-    <li className='flex flex-col items-center text-center group'>
-      <span className='font-bold text-5xl md:text-6xl bg-gradient-to-r from-primary to-purple-400 bg-clip-text' style={{ WebkitTextFillColor: "transparent" }}>1+</span>
-      <span className='text-sm text-gray-400 mt-2 group-hover:text-white transition-colors'>Years of Experience</span>
-    </li>
-    <li className='w-px h-12 bg-primary/30 hidden sm:block'></li>
-    <li className='flex flex-col items-center text-center group'>
-      <span className='font-bold text-5xl md:text-6xl bg-gradient-to-r from-primary to-purple-400 bg-clip-text' style={{ WebkitTextFillColor: "transparent" }}>10+</span>
-      <span className='text-sm text-gray-400 mt-2 group-hover:text-white transition-colors'>Projects Completed</span>
-    </li>
-   
-  </ul>
-</div>  */}
 
 
 
