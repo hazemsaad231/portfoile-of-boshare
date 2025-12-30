@@ -74,7 +74,7 @@ export const personal = {
 
 export const education = [
   {
-    degree: "Bachelor of Science in Computer Science",
+    degree: "Bachelor of Computer Science",
     institution: "Akhbar El Yom Academy",
     year: "2021 - 2025",
     description: "Graduation Project Grade: A+"
