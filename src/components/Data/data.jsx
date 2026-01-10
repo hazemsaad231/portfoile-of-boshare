@@ -4,11 +4,13 @@ import { FaDatabase, FaSave } from "react-icons/fa";
 import { MdArchitecture } from "react-icons/md";
 import { BiTransfer } from "react-icons/bi";
 import chat from '../../assets/images/chat.jpeg';
-import todo from '../../assets/images/nots.jpeg';
+import nots from '../../assets/images/nots.jpeg';
 import news from '../../assets/images/news.jpeg';
 import weather from '../../assets/images/weather.jpeg';
 import marsal from '../../assets/images/marsal.webp';
-
+import toku from '../../assets/images/toku.jpeg';
+import todo from '../../assets/images/todo.jpeg';
+import store from '../../assets/images/store.jpeg';
 
 
 
@@ -94,7 +96,7 @@ export const Flutter = [
     {
         id: 2,
         title: "Notes App",
-        img:todo,
+        img:nots,
         link:'https://github.com/Bu4ra-3mer/notes_app',
         skills: ["Flutter", "Clean Architecture", "Parse Server", "Freezed"],
         description: "A task management app built using Clean Architecture, integrating Parse Server for persistence and supporting Anonymous Sign-In."
@@ -122,6 +124,30 @@ export const Flutter = [
         link:'https://github.com/Bu4ra-3mer/weather_app',
         skills: ["Flutter", "Dio", "RESTful API", "Cached Network Image"],
         description: "A weather app displaying real-time weather information using APIs and optimizing image loading."
+    },
+    {
+        id: 6,
+        title: "Toku App",
+        img:toku,
+        link:'https://meet.google.com/oef-adze-wfc',
+        skills: ["Flutter", "assets", "setstate", "audioplayers package"],
+        description: "Created a beginner-friendly Japanese learning app with audio-based interaction."
+    },
+      {
+        id: 7,
+        title: "Todo App",
+        img:todo,
+        link:'https://github.com/Bu4ra-3mer/todo_list.git',
+        skills: ["Flutter", "Freezed package ", "Clean Architecture ", "Parse server"],
+        description: "To-Do app with Clean Architecture, Parse Server for storage, Freezed models, and Anonymous Sign-In."
+    },
+     {
+        id: 8,
+        title: "Store App",
+        img:store,
+        link:'https://github.com/Bu4ra-3mer/store_app.git',
+        skills: ["Flutter", "Handling errors ", "Reset APIs ", "Dio"],
+        description: "A sleek and intuitive Store App to explore, manage, and update products effortlessly."
     }
 ];
 
