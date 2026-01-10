@@ -11,6 +11,8 @@ import marsal from '../../assets/images/marsal.webp';
 import toku from '../../assets/images/toku.jpeg';
 import todo from '../../assets/images/todo.jpeg';
 import store from '../../assets/images/store.jpeg';
+import tunes from '../../assets/images/tunes.jpeg';
+import xo from '../../assets/images/xo.jpeg';
 
 
 
@@ -148,6 +150,22 @@ export const Flutter = [
         link:'https://github.com/Bu4ra-3mer/store_app.git',
         skills: ["Flutter", "Handling errors ", "Reset APIs ", "Dio"],
         description: "A sleek and intuitive Store App to explore, manage, and update products effortlessly."
+    },
+    {
+        id: 9,
+        title: "Tunes player",
+        img:tunes,
+        link:'https://github.com/Bu4ra-3mer/tunes_player.git',
+        skills: ["Flutter", "Handling errors ", "setstate ", "audioplayers","List view"],
+        description: "A simple music player with seven note levels, demonstrating audio playback and user interaction."
+    },
+    {
+        id: 10,
+        title: "XO Game",
+        img:xo,
+        link:'https://github.com/Bu4ra-3mer/xo.git',
+        skills: ["Flutter", "Handling errors ", "setstate ", "Gridview"],
+        description: "Classic XO game with score tracking for X and O players, providing a fun and competitive experience."
     }
 ];
 
